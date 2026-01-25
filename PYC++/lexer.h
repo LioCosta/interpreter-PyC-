@@ -7,11 +7,11 @@
 
 // Tipos de token
 enum TipoToken {
-    NUM,        // número
+    NUM,        
     NOME,       // variável
-    MAIS,       // +
-    MENOS,      // -
-    MULT,       // *
+    MAIS,      
+    MENOS,      
+    MULT,       
     DIV,        // /
     IGUAL,      // =
     IGUAL2,     // ==
@@ -21,11 +21,11 @@ enum TipoToken {
     MENOR_IG,   // <=
     MAIOR_IG,   // >=
     DOIS_PT,    // :
-    PRINT,      // print
-    IF,         // if
-    ELSE,       // else
-    WHILE,      // while
-    INPUT,      // input
+    PRINT,     
+    IF,        
+    ELSE,       
+    WHILE,      
+    INPUT,     
     FIM,        // acabou
     ERRO        // erro
 };

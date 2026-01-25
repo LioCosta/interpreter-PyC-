@@ -96,7 +96,7 @@ Cmd* Parser::parseCmd() {
 }
 
 Cmd* Parser::parsePrint() {
-    prox(); // print
+    prox(); 
     
     Expr* exp = parseExpr();
     Expr* call = mkCall("print", exp);

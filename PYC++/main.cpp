@@ -9,7 +9,7 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    cout << "Compilador Python-like\n\n";
+    cout << "Compilador PyC++\n\n";
     
     string arq;
     
@@ -20,27 +20,22 @@ int main(int argc, char* argv[]) {
     }
     
     try {
-        // 1. Ler
+        
         string codigo = Lexer::lerArq(arq);
         
-        // 2. Tokenizar
+        
         Lexer lex(codigo);
         vector<Token> tokens = lex.tokenizar();
         
-        // 3. Parser
         Parser parser(tokens);
         Bloco* prog = parser.parse();
-        
-        // 4. Semantico
         TabSim tab;
         Semantico sem(tab);
         sem.check(prog);
-        
-        // 5. Gerar C
+
         Gerador gen;
         string c_code = gen.gerar(prog);
-        
-        // Salvar
+
         ofstream out("output.c");
         out << c_code;
         out.close();

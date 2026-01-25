@@ -6,28 +6,28 @@
 #include <vector>
 #include <string>
 
-// Nós da árvore
+// Nós 
 struct Expr {
     enum Tipo { NUM, VAR, OP, ATT, CALL } tipo;
     
-    // Dados dependendo do tipo
-    int num_val;                            // para NUM
-    std::string var_nome;                   // para VAR
+    // Dados 
+    int num_val;                            
+    std::string var_nome;                  
     struct {
         std::string op;
         Expr* left;
         Expr* right;
-    } op_data;                              // para OP
+    } op_data;                         
     struct {
         std::string nome;
         Expr* valor;
-    } att_data;                             // para ATT
+    } att_data;                             
     struct {
         std::string func;
         Expr* arg;
-    } call_data;                            // para CALL
+    } call_data;                           
     
-    // Construtor simples
+    // Construtor 
     Expr() : tipo(NUM), num_val(0) {
         op_data.left = nullptr;
         op_data.right = nullptr;
@@ -74,7 +74,7 @@ Expr* mkOp(std::string op, Expr* left, Expr* right);
 Expr* mkAtt(std::string nome, Expr* valor);
 Expr* mkCall(std::string func, Expr* arg);
 
-// Parser principal
+// Parser 
 class Parser {
 private:
     std::vector<Token> tokens;

@@ -5,7 +5,7 @@ echo ========================================
 echo.
 
 echo Compilando todos os arquivos...
-g++ -std=c++17 -o nosso_compilador.exe main.cpp lexer.cpp parser.cpp semantico.cpp gerador.cpp
+g++ -std=c++17 -o PYc++.exe main.cpp lexer.cpp parser.cpp semantico.cpp gerador.cpp
 
 if %errorlevel% equ 0 (
     echo.
@@ -15,7 +15,7 @@ if %errorlevel% equ 0 (
     echo   nosso_compilador.exe exemplo.py
     echo.
     echo Isso vai criar:
-    echo   1. programa_gerado.c (código C)
+    echo   1. programa_gerado.c código C
     echo   2. Depois compile com: gcc programa_gerado.c -o programa.exe
     echo   3. Execute: programa.exe
     echo.

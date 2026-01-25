@@ -8,7 +8,6 @@ else:
 
 y = 0
 while y < 3:
-    print y
     y = y + 1
 
 z = x + y * 2

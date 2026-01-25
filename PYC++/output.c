@@ -11,6 +11,7 @@ int main() {
     int y = 0;
     while ((y < 3)) {
         printf("%d\n", y);
+        
     }
     y = (y + 1);
     int z = (x + (y * 2));
