@@ -1,0 +1,19 @@
+def soma(a: inteiro, b: inteiro): inteiro {
+    retorna a + b
+}
+
+def factorial(n: inteiro): inteiro {
+    se (n <= 1) {
+        retorna 1
+    } senao {
+        retorna n * factorial(n - 1)
+    }
+}
+
+var x: inteiro = 5
+escreve(soma(x, 3))
+escreve(factorial(x))
+
+para i de 1 ate 5 {
+    escreve(i)
+}
